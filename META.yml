@@ -1,0 +1,17 @@
+--- #YAML:1.0
+name:                Rose-DBx-Object-I18N
+version:             0.01
+abstract:            set of modules to deal with multilingual database
+license:             perl
+author:              
+    - Viacheslav Tikhanovskii <viacheslav.t@gmail.com>
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:     
+    Carp:                          0
+    Hash::Merge:                   0
+    Rose::DB::Object:              0
+    Test::More:                    0
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3
