@@ -29,7 +29,7 @@ my $u2 = User->new(
 );
 $u2->save();
 
-$ENV{ LANG } = undef;
+$ENV{ RDBO_I18N_LANG } = undef;
 
 my $users = User::Manager->get_objects();
 
@@ -39,7 +39,7 @@ is( $users->[ 0 ]->i18n_is_loaded(), 0 );
 is( $users->[ 0 ]->i18n->lang, 'en' );
 is( $users->[ 1 ]->i18n->lang, 'ru' );
 
-$ENV{ LANG } = 'en';
+$ENV{ RDBO_I18N_LANG } = 'en';
 
 $users = User::Manager->get_objects();
 

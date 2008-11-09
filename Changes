@@ -1,5 +1,9 @@
 Revision history for Rose-DBx-Object-I18N
 
+0.03    2008-11-09 00:00:00
+        - RDBO_I18N_LANG as a new $ENV variable to hold default language
+        - Fix wrong column selection in Helpers
+
 0.02    2008-11-08 00:00:00
         Pod coverage testing on demand.
 

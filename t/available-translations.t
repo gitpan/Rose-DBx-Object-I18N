@@ -21,7 +21,7 @@ my $u = User->new(
 );
 $u->save();
 
-$ENV{ LANG } = 'ru';
+$ENV{ RDBO_I18N_LANG } = 'ru';
 $u = User->new( id => $u->id );
 $u->load();
 

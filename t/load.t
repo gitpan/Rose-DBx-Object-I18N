@@ -21,7 +21,7 @@ my $u = User->new(
 );
 $u->save();
 
-$ENV{ LANG } = 'en';
+$ENV{ RDBO_I18N_LANG } = 'en';
 $u = User->new( id => $u->id );
 $u->load();
 
@@ -32,12 +32,14 @@ is( $u->i18n( 'ru' )->lang, 'ru' );
 
 $u = User->new( id => $u->id );
 $u->load();
-$ENV{ LANG } = 'ru';
+
+$ENV{ RDBO_I18N_LANG } = 'ru';
 is( $u->i18n->lang, 'ru' );
 
 $u = User->new( id => $u->id );
 $u->load();
-$ENV{ LANG } = 'en';
+
+$ENV{ RDBO_I18N_LANG } = 'en';
 is( $u->i18n->lang, 'en' );
 
 $u->delete( cascade => 1 );

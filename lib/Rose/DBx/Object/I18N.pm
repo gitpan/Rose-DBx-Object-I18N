@@ -14,7 +14,7 @@ use Rose::DBx::Object::I18N::Helpers ':all';
 
 our $Debug = 0;
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 =head1 NAME
 
@@ -416,7 +416,7 @@ sub update {
 
 =head2 load
 
-When you want to load default language ($ENV{LANG} or original) just load as you
+When you want to load default language ($ENV{RDBO_I18N_LANG} or original) just load as you
 always do:
 
     $u = User->new( id => 1 );

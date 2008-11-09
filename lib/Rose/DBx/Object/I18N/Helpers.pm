@@ -6,20 +6,18 @@ use warnings;
 use Rose::Object::MixIn();
 our @ISA = qw(Rose::Object::MixIn);
 
-__PACKAGE__->export_tag( all => [ qw(i18n_language) ] );
+__PACKAGE__->export_tag(all => [qw(i18n_language)]);
 
 sub i18n_language {
-    my ( $self ) = @_;
+    my ($self) = @_;
 
-    my $lang;
+    my $lang = $ENV{RDBO_I18N_LANG};
 
-    my $env_lang;
-    ( $env_lang ) = ( $ENV{ LANG } =~ m/^(..)(?:_..\.)?/ ) if $ENV{ LANG };
-
-    $lang = $env_lang;
-
-    if ( !$lang && $self ) {
-        $lang = $self->can( 'orig_lang' ) ? $self->orig_lang : undef;
+    if (!$lang && $self) {
+        unless ( $self->can('object_class') ) {
+            my $i18n_lang_column = $self->_i18n_lang_column;
+            $lang = $self->$i18n_lang_column;
+        }
     }
 
     return $lang;

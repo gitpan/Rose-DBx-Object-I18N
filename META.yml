@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Rose-DBx-Object-I18N
-version:             0.02
+version:             0.03
 abstract:            set of modules to deal with multilingual database
 license:             perl
 author:              
