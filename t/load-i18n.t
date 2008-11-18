@@ -1,9 +1,14 @@
-#! /usr/bin/perl
+#!/usr/bin/perl
 
 use strict;
 use warnings;
 
-use Test::More 'tests' => 9;
+use Test::More;
+
+eval "use DBD::SQLite";
+plan skip_all => "DBD::SQLite is required to run this test" if $@;
+
+plan 'tests' => 9;
 
 use lib 't/lib';
 

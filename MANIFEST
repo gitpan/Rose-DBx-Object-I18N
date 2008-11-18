@@ -15,7 +15,6 @@ t/03internal.t
 t/available-translations-after-prefetch.t
 t/available-translations-before-load-i18n.t
 t/available-translations.t
-t/boilerplate.t
 t/delete-i18n.t
 t/delete.t
 t/i18n-is-original-loaded.t
